@@ -1,9 +1,7 @@
 osname := $(shell uname -s)
 
-#use Android toolchain on OS X
-#use linaro bare metal toolchain on linux
-ifeq ($(osname), Darwin)
-CROSS_PREFIX=aarch64-linux-android-
+ifeq ($(osname), Linux)
+CROSS_PREFIX=aarch64-linux-gnu-
 else
 CROSS_PREFIX=aarch64-none-elf-
 endif
@@ -23,4 +21,4 @@ test64.bin: test64.elf
 	$(CROSS_PREFIX)objcopy -O binary $< $@
 
 clean:
-	rm -f test65.bin test64.elf startup64.o test64.o
+	rm -f test64.elf startup64.o test64.o

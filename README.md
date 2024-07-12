@@ -1,4 +1,15 @@
 # aarch64-bare-metal-qemu
+
+## build
+
+make
+
+## run
+
+./run.sh
+
+## reference
+
 simple aarch64 bare metal 'Hello World' on qemu
 
 Since I didn't write bare metal program on ARMv8/aarch64 before, I'll just do one.
