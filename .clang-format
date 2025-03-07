@@ -1,0 +1,9 @@
+IndentWidth: 4
+UseTab: Never
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterFunction: true
+
+AlignTrailingComments: true
+SpacesBeforeTrailingComments: 2

@@ -22,3 +22,7 @@ Since I didn't write bare metal program on ARMv8/aarch64 before, I'll just do on
 6. The address to load the program to should be changed too. '0x10000' is not valid RAM or ROM address for -M virt. According to virt.c, '0x40000000' is OK to use. So my linker script is modified and named [test64.ld](test64.ld)
 7. I use 'aarch64-none-elf-ld -T test64.ld test64.o startup64.o -o test64.elf' to generate test64.elf
 8. That's it. Since qemu can load elf directly now. We can use 'qemu-system-aarch64 -M virt -cpu cortex-a57 -nographic  -kernel test64.elf' to run the elf and see 'Hello Wolrd!'.
+
+# TODO
+
+后续开启MMU支持，使用QEMU调。

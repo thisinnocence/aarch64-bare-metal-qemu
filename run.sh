@@ -5,4 +5,3 @@
     -M virt \
     -cpu cortex-a57 \
     -kernel test64.elf
-
